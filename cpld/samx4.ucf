@@ -5,7 +5,7 @@
 # Released under the Creative Commons Attribution-ShareAlike 4.0
 # International License (CC BY-SA 4.0).  Full text in the LICENSE file.
 
-## 18 Outputs
+## 27 Outputs
 
 NET Z<0> LOC = P85;
 NET Z<1> LOC = P89;
@@ -16,6 +16,15 @@ NET Z<5> LOC = P70;
 NET Z<6> LOC = P72;
 NET Z<7> LOC = P56;
 NET Z<8> LOC = P49;
+NET Z<9> LOC = P35;
+NET Z<10> LOC = P36;
+NET Z<11> LOC = P37;
+NET Z<12> LOC = P39;
+NET Z<13> LOC = P40;
+NET Z<14> LOC = P41;
+NET Z<15> LOC = P42;
+NET Z<16> LOC = P43;
+NET Z<17> LOC = P81;
 
 NET S<0> LOC = P79;
 NET S<1> LOC = P77;

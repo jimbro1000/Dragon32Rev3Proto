@@ -95,7 +95,7 @@ entity samx4 is
 		     A : in std_logic_vector(15 downto 0);
 		     RnW : in std_logic;
 		     S : out std_logic_vector(2 downto 0);
-		     Z : out std_logic_vector(8 downto 0);
+		     Z : out std_logic_vector(17 downto 0);
 		     nRAS0 : out std_logic;
 		     nCAS : out std_logic;
 		     nWE : out std_logic;
@@ -163,9 +163,10 @@ architecture rtl of samx4 is
 	signal is_IO0 : boolean;
 	signal is_IO1 : boolean;
 	signal is_IO2 : boolean;
-	signal is_FF3x : boolean;
+	signal is_FF2x : boolean;
 	signal is_FFCx : boolean;
-	signal is_FFEx : boolean;
+	signal is_FFEx : boolean;  -- was unused reserved FFE0-FFEF
+	signal is_FFFx : boolean;
 	signal is_RAM : boolean;
 	signal is_RAM_or_IO0 : boolean;  -- used in AD rate mode
 
@@ -265,13 +266,14 @@ begin
 
 	is_FFxx <= A(15 downto 8) = "11111111";
 	is_IO0  <= is_FFxx and A(7 downto 5) = "000";   -- ALSO FF1x
-	is_IO1  <= is_FFxx and A(7 downto 4) = "0010";  -- ONLY FF2x
-	is_FF3x <= is_FFxx and A(7 downto 4) = "0011";  -- ONLY FF3x
+	is_IO1  <= is_FFxx and A(7 downto 5) = "001";   -- ONLY FF2x & FF3x
+	-- not needed anymore is_FF3x <= is_FFxx and A(7 downto 4) = "001";  -- ONLY FF3x use FFEx instead
 	is_IO2  <= is_FFxx and A(7 downto 5) = "010";   -- ALSO FF5x
 	is_FFCx <= is_FFxx and A(7 downto 5) = "110";   -- ALSO FFDx
-	is_FFEx <= is_FFxx and A(7 downto 5) = "111";   -- ALSO FFFx
+	is_FFEx <= is_FFxx and A(7 downto 4) = "1110";   -- ONLY FFFx
+	if_FFFx <= is_FFxx AND A(7 downto 4) = "1111";
 
-	process (is_FFxx, is_IO0, is_IO1, is_IO2, is_FFEx, TY, RnW, A(15 downto 13))
+	process (is_FFxx, is_IO0, is_IO1, is_IO2, is_FFFx, TY, RnW, A(15 downto 13))
 	begin
 		if is_IO0 then
 			S <= "100";
@@ -282,7 +284,7 @@ begin
 		elsif is_IO2 then
 			S <= "110";
 			is_RAM <= false;
-		elsif is_FFEx then
+		elsif is_FFFx then
 			S <= "010";
 			is_RAM <= false;
 		elsif is_FFxx then
@@ -329,7 +331,7 @@ begin
 
 	-- -- Register writes
 
-	process (IER, E_i, RnW, is_FFxx, is_FF3x, is_FFCx)
+	process (IER, E_i, RnW, is_FFxx, is_FFEx, is_FFCx)
 	begin
 		if IER = '1' then
 			Vbuf2 <= (others => '0');
@@ -362,7 +364,7 @@ begin
 					when "1111" => TY <= A(0);
 					when others => null;
 				end case;
-			elsif is_FF3x and RnW = '0' then
+			elsif is_FFEx and RnW = '0' then
 				-- 256K banker board registers
 				case A(3 downto 2) is
 					when "00" => bank(0) <= A(1 downto 0);
@@ -627,46 +629,28 @@ begin
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 	-- -- Address multiplexer
 
-	process (z_mux, z_source, A, B, DA0, vbank, bank, C, TY, P1)
+	process (z_mux, z_source, A, B, DA0, vbank, bank, TY, P1)
 	begin
-		if z_mux = ROW then
-			case z_source is
-				when MPU =>
-					Z(8) <= bank(to_integer(unsigned'('0'&A(15))))(0);
-					Z(7 downto 0) <= A(7 downto 0);
-				when VDG =>
-					if vbank = VB_L32 then
-						Z(8) <= bank(0)(0);
-					else
-						Z(8) <= '0';
-					end if;
-					Z(7 downto 0) <= B(7 downto 1) & DA0;
-				when REF =>
-					Z(8) <= '0';
-					Z(7 downto 0) <= C(7 downto 0);
-			end case;
-		else
-			case z_source is
-				when MPU =>
-					Z(8) <= bank(to_integer(unsigned'('0'&A(15))))(1);
-					if TY = '0' then
-						Z(7) <= P1;
-					else
-						Z(7) <= A(15);
-					end if;
-					Z(6 downto 0) <= A(14 downto 8);
-				when VDG =>
-					if vbank = VB_L32 then
-						Z(8) <= bank(0)(1);
-					else
-						Z(8) <= '0';
-					end if;
-					Z(7 downto 0) <= B(15 downto 8);
-				when REF =>
-					Z(8) <= '0';
-					Z(7 downto 0) <= C(7 downto 0);
-			end case;
-		end if;
+		case z_source is
+			when MPU =>
+				Z(17) <= bank(to_integer(unsigned'('0'&A(15))))(0);
+				Z(16) <= bank(to_integer(unsigned'('0'&A(15))))(0);
+				if TY = '0' then
+					Z(15) <= P1;
+				else
+					Z(15) <= A(15);
+				end if;
+				Z(14 downto 0) <= A(14 downto 0);
+			when VDG =>
+				if vbank = VB_L32 then
+					Z(17) <= bank(0)(1);
+					Z(16) <= bank(0)(0);
+				else
+					z(17) <= 0;
+					z(16) <= 0;
+				end if;
+				z(15 downto 0) <= B(15 downto 1) & DA0;
+		end case;
 	end process;
 
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
