@@ -9,7 +9,8 @@
     (date "2023-05-25")
     (rev "3.0")
     (company "Dragon Data")
-    (comment 1 "Recreation by Julian Brown")
+    (comment 1 "Modified by Julian Brown")
+    (comment 2 "SAMx4 by Ciaran Anscomb")
   )
 
   (lib_symbols
