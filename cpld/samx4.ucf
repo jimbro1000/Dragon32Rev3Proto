@@ -1,0 +1,66 @@
+# SAMx4
+#
+# (C) 2023 Ciaran Anscomb
+#
+# Released under the Creative Commons Attribution-ShareAlike 4.0
+# International License (CC BY-SA 4.0).  Full text in the LICENSE file.
+
+## 27 Outputs
+
+NET Z<0> LOC = P85;
+NET Z<1> LOC = P89;
+NET Z<2> LOC = P94;
+NET Z<3> LOC = P65;
+NET Z<4> LOC = P67;
+NET Z<5> LOC = P70;
+NET Z<6> LOC = P72;
+NET Z<7> LOC = P56;
+NET Z<8> LOC = P49;
+NET Z<9> LOC = P35;
+NET Z<10> LOC = P36;
+NET Z<11> LOC = P37;
+NET Z<12> LOC = P39;
+NET Z<13> LOC = P40;
+NET Z<14> LOC = P41;
+NET Z<15> LOC = P42;
+NET Z<16> LOC = P43;
+NET Z<17> LOC = P81;
+
+NET S<0> LOC = P79;
+NET S<1> LOC = P77;
+NET S<2> LOC = P74;
+
+NET nWE LOC = P53;
+NET Q LOC = P97;
+NET E LOC = P91;
+NET nCAS LOC = P68;
+NET nRAS0 LOC = P71;
+NET VClk LOC = P1;
+
+## 21 Inputs
+
+NET A<0> LOC = P80;
+NET A<1> LOC = P78;
+NET A<2> LOC = P76;
+NET A<3> LOC = P63;
+NET A<4> LOC = P58;
+NET A<5> LOC = P59;
+NET A<6> LOC = P60;
+NET A<7> LOC = P61;
+NET A<8> LOC = P17;
+NET A<9> LOC = P18;
+NET A<10> LOC = P19;
+NET A<11> LOC = P20;
+NET A<12> LOC = P12;
+NET A<13> LOC = P14;
+NET A<14> LOC = P9;
+NET A<15> LOC = P8;
+
+NET DA0 LOC = P22 | BUFG = CLK;
+NET OscOut LOC = P23 | BUFG = CLK;
+
+NET nHS LOC = P46;
+NET RnW LOC = P87;
+# Reset is indirect, so while this would normally be an SR pin, it doesn't make
+# sense to configure it as such:
+NET nRST LOC = P99 | BUFG = DATA_GATE;
