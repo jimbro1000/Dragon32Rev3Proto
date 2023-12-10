@@ -77,6 +77,7 @@
         }
       ],
       "drc_exclusions": [
+        "footprint_type_mismatch|127965200|54051200|3f1afe76-1eca-4267-b372-b07a73a1530d|00000000-0000-0000-0000-000000000000",
         "lib_footprint_issues|279114752|192453699|40541b21-6742-47b8-9d6d-b55652d8d045|00000000-0000-0000-0000-000000000000"
       ],
       "meta": {
@@ -119,7 +120,7 @@
         "silk_overlap": "ignore",
         "skew_out_of_range": "error",
         "solder_mask_bridge": "error",
-        "starved_thermal": "error",
+        "starved_thermal": "warning",
         "text_height": "warning",
         "text_thickness": "warning",
         "through_hole_pad_without_hole": "error",
@@ -419,7 +420,7 @@
       "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
-      "simulation_model_issue": "error",
+      "simulation_model_issue": "ignore",
       "unannotated": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
@@ -479,15 +480,15 @@
     "netclass_patterns": [
       {
         "netclass": "Power",
-        "pattern": "+*V"
+        "pattern": "+12V"
       },
       {
         "netclass": "Power",
-        "pattern": "-*V"
+        "pattern": "+5V"
       },
       {
         "netclass": "Power",
-        "pattern": "GND"
+        "pattern": "-12V"
       }
     ]
   },
@@ -574,6 +575,10 @@
     [
       "d9dba8db-e731-4cb4-b2de-fefd65b288bc",
       "VIDEO"
+    ],
+    [
+      "e2a41718-bdac-4f1d-9b0f-8b4d725fe2df",
+      "Serial"
     ]
   ],
   "text_variables": {}
