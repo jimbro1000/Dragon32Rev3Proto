@@ -477,20 +477,7 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": [
-      {
-        "netclass": "Power",
-        "pattern": "+12V"
-      },
-      {
-        "netclass": "Power",
-        "pattern": "+5V"
-      },
-      {
-        "netclass": "Power",
-        "pattern": "-12V"
-      }
-    ]
+    "netclass_patterns": []
   },
   "pcbnew": {
     "last_paths": {
@@ -579,6 +566,10 @@
     [
       "e2a41718-bdac-4f1d-9b0f-8b4d725fe2df",
       "Serial"
+    ],
+    [
+      "c67709bf-3398-4916-93ec-8eb4649f0aa7",
+      "AUDIO"
     ]
   ],
   "text_variables": {}

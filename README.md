@@ -6,41 +6,84 @@ This project started as a recreation of the SA2120 CPU Mainboard
 for the 1982 Dragon Data **Dragon 32**
 
 Everything (excluding modifications) is taken from the SA2120
-schematics. Where this version changes is that the options to
-use banks of 16K DRAM is gone, you must use 64K DRAMs, with it
-goes all the extra circuitry for configuring the memory for
-different types of chip.
+schematics. Where this version changes is the move to surface
+mount components which radically alters the size of each part
+along with a move to using SRAM instead of DRAM. The intention
+is that the board should be supplied fully or semi-populated
+leaving just optional (socketed) components to be fitted.
 
-The ROM is now a single 27C256 eprom with an option to switch
+The ROM is now a single 28C256 eprom with an option to switch
 between two images using JP6 or to allow the rom to be
-automatically selected from the PIA.
-
-A second ROM selection jumper is available at JP3 to be used
-when a 27C512 is fitted. This swaps the value to A15 between
-high and low. When a 27C256 is fitted this must be set low.
-
-Hidden on the back of the board is a solder pad jumper (JP7) that
-also needs setting to handle a 27C256 or 27C512. Bridging pad
-1 sets pin 22 of the rom to ground, using pad 3 sets the
-pin to use the ROM select signal shared with pin 20. When a
-27C512 is fitted this must be set to pad 1.
+automatically selected from the PIA. In effect this allows the
+computer to operate as a D32 but with two different images or
+as a D64.
 
 The video circuits have been isolated from the rest of the
 board to improve output quality.
 
+To maintain compatibility with the D64 there is an optional
+serial port. This needs to be enabled by bridging a solder
+jumper (JP3) to position 1-2. If the serial port is not
+being populated it should be position 2-3. By default this
+is not bridged and the computer will not function without
+the jumper being set. If the supporting SMD ICs at U13 and
+U14 are fitted the jumper can safely be left in position
+1-2 regardless of whether the 6551 UART chip is fitting.
+
+If you are fitting the board into an
+early D32 case the serial port would be completely covered
+without modifying the case. Later D32 cases had all four
+ports but the fourth (serial) port blanked off internally.
+
 A second (internal) cartridge port has been added, by way of
 a 2x20 header, along with an additional +5V/Gnd pickup point
-for further internal expansion.
+for further internal expansion. The keyboard connector also
+has two additional pins that can supply 5v to the keyboard,
+the extra pins are on the left. The keyboard should always 
+be fitted to the right to avoid any shorts.
 
-An optional 256K banking solution is incorporated using the
-design for Stewart Orchard's upgrade board and GAL design.
+The board incorporates a replacement to the SAM chip based on
+Ciaran Anscomb's SAMx4 design which in turn includes Stewart
+Orchards 256k banker board 
 <https://gitlab.com/sorchard001/dragon-256k-banker-board>
+
+A custom VHDL is needed for this. Do not use the code from
+Ciaran's site as it won't work.
+
+The VHDL has potential (untried as of yet) to allow the
+board to run permanently at double speed without loss of
+a working display. The potential extends to running at 4x
+speed but this is subject to using a suitable CPU and SRAM.
+
+Because all of the CPU speed control is managed by the CPLD
+replacing the SAM it is possible to change and update the
+VHDL programming to include new features provided they do
+not need changes to the board itself. Running at x4 speed
+would require a different oscillator at X1 but would not
+need other changes. All of the specified components are 
+modern high performance equivalents and should be easily
+able to cope with the high clock frequencies.
+
+The board also includes three PIAs but only the first two are
+necessary for normal usage. The third PIA (U7) is used by some
+of the video daughterboards to provide additional functionality
+such as a programmable character "rom".
+
+All of the PIAs are changed to the W65C21 chip instead of the
+MC6821. These chips work at higher frequencies and conveniently
+use a smaller PLCC package
 
 ## Progress ##
 
-In the current state (3.0) none of the board is tested. This
-is purely experimental although the schematics have been
-tested with the previous rev 2 board and are largely unchanged.
+In the current state (3.0) only the basics of the board have
+been tested and proven. 
+
+To be tested:
+
+* SRAM conversion
+* Serial port
+* PIA 3
+* SAMx4
 
 ## Modifications ##
 
@@ -66,12 +109,6 @@ operate as a communication port for DRIVEWIRE.
 The board is configurable between 32k and 64k ram addressing
 using jumper JP1. In most scenarios there is no reason to
 disable the 64k option.
-
-The upgrade to 256K needs the 4164s swapping for 41256s. The
-pre-bridged jumper at JP5 needs cutting. The SAM also needs 
-to be replaced with a 74LS785. The optional
-components can then be fitted and should work without further
-alteration.
 
 ### Video PIA ###
 
@@ -102,31 +139,42 @@ character ram data.
 The external character ram can only be programmed while the
 video is set to the internal character data of the 6847.
 
+### Serial Port ###
+
+The board includes the serial port capability originally
+added to the D64. This adds a dedicated 6551 UART chip
+to the machine allowing serial communications at higher
+speeds without locking out the CPU. The port is optional.
+
+To allow this to work the board *must* user a D64 power
+board that supplies -12V instead of -5V. It is possible
+to rig the board to work by bridging two pins (2 and 3)
+of REG1 but this is not the intended mode of operation.
+If the board is rigged for -5V supply then REG1, C18
+and C19 must be left unpopulated.
+
 ## Substitutions ##
 
-Many of the original components are simply unobtainable or
-just very hard (and expensive) to locate. The transistors
-will need modern substitutes as the BC141, BC212 and 2N2369
-are all obsolete but thankfully these are fairly run-of-the-mill
-transistors and shouldn't cause any particular issues.
+All of the components specified with the exception of
+the CPU are current and should be readily available.
+Supplies of 6809 CPUs are still plentiful but are all
+NOS.
 
-The CPU and PIAs are all fairly easy to obtain online
-and possibly even new (MC6821s are still made and there
-are lots of compatible alternatives). A and B rated components
-should all be usable but make sure the processor is an "09e".
-The Hitachi HD6309 is usable but may cause crashes in some
-software due to lazy coding.
+The Hitachi HD6309 is usable but may cause crashes in 
+some software due to lazy coding. It is however still 
+made thanks to usage in old military equipment in at
+least one country.
 
 ### The Future ###
 
-As these parts become harder to find it is inevitable that
-replacements and redesigns will be needed. The most obvious
-of these is the SAM chip. In 2023 these are pretty much
-unobtainable without harvesting from another Dragon or CoCo.
-In order to be viable the SAMs functionality needs to be
-replicated in a modern CPLD, this opens up an opportunity
-to incorporate the memory paging into a single chip, 
-further reducing complexity on the board. In order to use
-the ram banking the SAM already needs to be replaced with
-a 74LS785, some supply of these does still exist but the
-numbers are painfully small.
+The board may look empty in its current form but the design
+is dominated by the main data and address busses.
+
+The design will also include two AY8912 audio chips to 
+provide stereo sound. This brings utilisation of the 
+additional device addressing to 50% but also fills up
+the remainder of the board.
+
+It is possible to increase the size of the board along
+the bottom edge as the current design complies with the
+original D32 design rather than the enlarged D64 board.
