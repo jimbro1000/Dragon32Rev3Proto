@@ -155,18 +155,15 @@ and C19 must be left unpopulated.
 
 ## Substitutions ##
 
-Many of the original components are simply unobtainable or
-just very hard (and expensive) to locate. The transistors
-will need modern substitutes as the BC141, BC212 and 2N2369
-are all obsolete but thankfully these are fairly run-of-the-mill
-transistors and shouldn't cause any particular issues.
+All of the components specified with the exception of
+the CPU are current and should be readily available.
+Supplies of 6809 CPUs are still plentiful but are all
+NOS.
 
-The CPU and PIAs are all fairly easy to obtain online
-and possibly even new (MC6821s are still made and there
-are lots of compatible alternatives). A and B rated components
-should all be usable but make sure the processor is an "09e".
-The Hitachi HD6309 is usable but may cause crashes in some
-software due to lazy coding.
+The Hitachi HD6309 is usable but may cause crashes in 
+some software due to lazy coding. It is however still 
+made thanks to usage in old military equipment in at
+least one country.
 
 ### The Future ###
 
