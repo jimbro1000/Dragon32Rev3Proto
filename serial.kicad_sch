@@ -2,7 +2,15 @@
 
   (uuid 7289f181-37b2-4a44-b317-42f401cdec48)
 
-  (paper "A4")
+  (paper "A3")
+
+  (title_block
+    (date "2024-01-07")
+    (rev "3.0")
+    (company "Dragon Data")
+    (comment 1 "Modified by Julian Brown")
+    (comment 2 "SAMx4 by Ciaran Anscomb")
+  )
 
   (lib_symbols
     (symbol "4xxx:4069" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
