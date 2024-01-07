@@ -1708,7 +1708,7 @@
   (symbol (lib_id "Device:D_Small_Filled") (at 102.108 63.754 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp yes) (fields_autoplaced)
     (uuid 0b0daea8-11d8-424b-b6d5-ccf86edc52ad)
-    (property "Reference" "D2" (at 104.14 62.4839 90)
+    (property "Reference" "D10" (at 104.14 62.4839 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N914" (at 104.14 65.0239 90)
@@ -1727,9 +1727,6 @@
     (pin "2" (uuid 87740539-1a65-4f8b-9f0c-db3c7420addf))
     (instances
       (project "Dragon32"
-        (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/28dac1c2-804e-40fd-9ff5-acdb4226ab76"
-          (reference "D2") (unit 1)
-        )
         (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/e2a41718-bdac-4f1d-9b0f-8b4d725fe2df"
           (reference "D10") (unit 1)
         )
@@ -1771,7 +1768,7 @@
   (symbol (lib_id "Device:R_Small") (at 97.028 59.182 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp yes) (fields_autoplaced)
     (uuid 1043688a-f4b9-4c2e-93ee-49d13762dd02)
-    (property "Reference" "R28" (at 95.758 57.658 0)
+    (property "Reference" "R58" (at 95.758 57.658 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "47K" (at 98.298 57.658 0)
@@ -1790,9 +1787,6 @@
     (pin "2" (uuid dd3d050b-3684-48e4-a410-65d892155e6f))
     (instances
       (project "Dragon32"
-        (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/64d8d7b7-14ab-4042-9ee8-f1aec24a139c"
-          (reference "R28") (unit 1)
-        )
         (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/e2a41718-bdac-4f1d-9b0f-8b4d725fe2df"
           (reference "R58") (unit 1)
         )
@@ -1933,7 +1927,7 @@
   (symbol (lib_id "Device:R_Small") (at 113.792 75.184 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp yes)
     (uuid 2b975f2b-6e8f-4663-b3d9-d99c4d9dba7f)
-    (property "Reference" "R28" (at 111.76 79.502 90)
+    (property "Reference" "R53" (at 111.76 79.502 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "4K7" (at 111.76 77.216 90)
@@ -1952,9 +1946,6 @@
     (pin "2" (uuid 9461900b-8d2c-44a2-9506-176ee745559e))
     (instances
       (project "Dragon32"
-        (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/64d8d7b7-14ab-4042-9ee8-f1aec24a139c"
-          (reference "R28") (unit 1)
-        )
         (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/e2a41718-bdac-4f1d-9b0f-8b4d725fe2df"
           (reference "R53") (unit 1)
         )
@@ -1965,7 +1956,7 @@
   (symbol (lib_id "Device:D_Small_Filled") (at 92.964 63.754 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp yes) (fields_autoplaced)
     (uuid 32c49ab9-2b9d-4f0e-9196-3e61b414d7fd)
-    (property "Reference" "D2" (at 94.996 62.484 90)
+    (property "Reference" "D11" (at 94.996 62.484 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "1N914" (at 94.996 65.024 90)
@@ -1984,9 +1975,6 @@
     (pin "2" (uuid 544c2801-cc51-45e3-aef9-57803c9fb2ba))
     (instances
       (project "Dragon32"
-        (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/28dac1c2-804e-40fd-9ff5-acdb4226ab76"
-          (reference "D2") (unit 1)
-        )
         (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/e2a41718-bdac-4f1d-9b0f-8b4d725fe2df"
           (reference "D11") (unit 1)
         )
@@ -1997,7 +1985,7 @@
   (symbol (lib_id "Device:D_Small_Filled") (at 92.964 50.8 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp yes) (fields_autoplaced)
     (uuid 3482d3b0-8245-4c19-96b9-cb7d82b35001)
-    (property "Reference" "D2" (at 94.996 49.53 90)
+    (property "Reference" "D12" (at 94.996 49.53 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "1N914" (at 94.996 52.07 90)
@@ -2016,9 +2004,6 @@
     (pin "2" (uuid 9bd612a7-583d-4bc7-8325-785bda1779ff))
     (instances
       (project "Dragon32"
-        (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/28dac1c2-804e-40fd-9ff5-acdb4226ab76"
-          (reference "D2") (unit 1)
-        )
         (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/e2a41718-bdac-4f1d-9b0f-8b4d725fe2df"
           (reference "D12") (unit 1)
         )
@@ -2183,7 +2168,7 @@
   (symbol (lib_id "Device:D_Small_Filled") (at 57.658 58.166 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp yes) (fields_autoplaced)
     (uuid 4f43d036-527e-428a-a36f-5d7feef7d16c)
-    (property "Reference" "D2" (at 59.69 56.8959 90)
+    (property "Reference" "D16" (at 59.69 56.8959 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N914" (at 59.69 59.4359 90)
@@ -2202,9 +2187,6 @@
     (pin "2" (uuid eb48a47d-f9e2-4a2e-87f8-aa8ae8000097))
     (instances
       (project "Dragon32"
-        (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/28dac1c2-804e-40fd-9ff5-acdb4226ab76"
-          (reference "D2") (unit 1)
-        )
         (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/e2a41718-bdac-4f1d-9b0f-8b4d725fe2df"
           (reference "D16") (unit 1)
         )
@@ -2246,7 +2228,7 @@
   (symbol (lib_id "Device:R_Small") (at 113.792 66.294 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp yes) (fields_autoplaced)
     (uuid 52f59f25-8806-42d3-94f2-1cea2856abcc)
-    (property "Reference" "R28" (at 113.792 61.214 90)
+    (property "Reference" "R54" (at 113.792 61.214 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "4K7" (at 113.792 63.754 90)
@@ -2265,9 +2247,6 @@
     (pin "2" (uuid 6eeb7436-197f-4f71-a6d1-cd7481062609))
     (instances
       (project "Dragon32"
-        (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/64d8d7b7-14ab-4042-9ee8-f1aec24a139c"
-          (reference "R28") (unit 1)
-        )
         (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/e2a41718-bdac-4f1d-9b0f-8b4d725fe2df"
           (reference "R54") (unit 1)
         )
@@ -2278,7 +2257,7 @@
   (symbol (lib_id "Device:R_Small") (at 71.628 50.8 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp yes) (fields_autoplaced)
     (uuid 54d4df43-1f82-4fd6-bbe0-791d5fa2a59f)
-    (property "Reference" "R28" (at 71.628 45.72 90)
+    (property "Reference" "R60" (at 71.628 45.72 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100K" (at 71.628 48.26 90)
@@ -2297,9 +2276,6 @@
     (pin "2" (uuid cf8f379f-f84f-4315-bd63-4da4ee1b0c27))
     (instances
       (project "Dragon32"
-        (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/64d8d7b7-14ab-4042-9ee8-f1aec24a139c"
-          (reference "R28") (unit 1)
-        )
         (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/e2a41718-bdac-4f1d-9b0f-8b4d725fe2df"
           (reference "R60") (unit 1)
         )
@@ -2638,7 +2614,7 @@
   (symbol (lib_id "Device:R_Small") (at 114.046 72.644 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp yes)
     (uuid 7fbaf211-8e8a-424c-80eb-f9f817105102)
-    (property "Reference" "R28" (at 114.046 69.088 90)
+    (property "Reference" "R44" (at 114.046 69.088 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "4K7" (at 114.046 70.866 90)
@@ -2657,9 +2633,6 @@
     (pin "2" (uuid 299c08f9-9b82-4b39-8127-02066bba86a0))
     (instances
       (project "Dragon32"
-        (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/64d8d7b7-14ab-4042-9ee8-f1aec24a139c"
-          (reference "R28") (unit 1)
-        )
         (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/e2a41718-bdac-4f1d-9b0f-8b4d725fe2df"
           (reference "R44") (unit 1)
         )
@@ -2670,7 +2643,7 @@
   (symbol (lib_id "Device:D_Small_Filled") (at 67.056 67.564 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp yes) (fields_autoplaced)
     (uuid 80877a9f-e11a-47a9-be6b-2de751204bde)
-    (property "Reference" "D2" (at 69.088 66.294 90)
+    (property "Reference" "D17" (at 69.088 66.294 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "1N914" (at 69.088 68.834 90)
@@ -2689,9 +2662,6 @@
     (pin "2" (uuid a23d9389-0bf6-4caa-bbbb-dd6e84e7641f))
     (instances
       (project "Dragon32"
-        (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/28dac1c2-804e-40fd-9ff5-acdb4226ab76"
-          (reference "D2") (unit 1)
-        )
         (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/e2a41718-bdac-4f1d-9b0f-8b4d725fe2df"
           (reference "D17") (unit 1)
         )
@@ -2727,7 +2697,7 @@
   (symbol (lib_id "Device:D_Small_Filled") (at 102.108 50.8 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp yes) (fields_autoplaced)
     (uuid 8fb2ef90-0f36-4ec5-9fb5-61200a896590)
-    (property "Reference" "D2" (at 104.14 49.5299 90)
+    (property "Reference" "D13" (at 104.14 49.5299 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N914" (at 104.14 52.0699 90)
@@ -2746,9 +2716,6 @@
     (pin "2" (uuid 2ebdc3d8-d521-4235-878d-849b94e4eaac))
     (instances
       (project "Dragon32"
-        (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/28dac1c2-804e-40fd-9ff5-acdb4226ab76"
-          (reference "D2") (unit 1)
-        )
         (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/e2a41718-bdac-4f1d-9b0f-8b4d725fe2df"
           (reference "D13") (unit 1)
         )
@@ -2759,7 +2726,7 @@
   (symbol (lib_id "Device:D_Small_Filled") (at 61.214 44.196 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp yes)
     (uuid a17d6677-ddd0-46b5-ba0d-89425f144bbc)
-    (property "Reference" "D2" (at 62.738 42.926 90)
+    (property "Reference" "D15" (at 62.738 42.926 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N914" (at 62.484 45.466 90)
@@ -2778,9 +2745,6 @@
     (pin "2" (uuid d715c965-83c2-41a0-8962-d6ec2f20d05e))
     (instances
       (project "Dragon32"
-        (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/28dac1c2-804e-40fd-9ff5-acdb4226ab76"
-          (reference "D2") (unit 1)
-        )
         (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/e2a41718-bdac-4f1d-9b0f-8b4d725fe2df"
           (reference "D15") (unit 1)
         )
@@ -2791,7 +2755,7 @@
   (symbol (lib_id "Device:R_Small") (at 155.702 79.756 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp yes) (fields_autoplaced)
     (uuid aedfa31f-89ad-4c5c-8b16-3f2f00f888e9)
-    (property "Reference" "R28" (at 155.702 74.676 90)
+    (property "Reference" "R37" (at 155.702 74.676 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "47R" (at 155.702 77.216 90)
@@ -2810,9 +2774,6 @@
     (pin "2" (uuid c22e3d57-953f-44a8-91a3-44f189fe3f0a))
     (instances
       (project "Dragon32"
-        (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/64d8d7b7-14ab-4042-9ee8-f1aec24a139c"
-          (reference "R28") (unit 1)
-        )
         (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/e2a41718-bdac-4f1d-9b0f-8b4d725fe2df"
           (reference "R37") (unit 1)
         )
@@ -3062,7 +3023,7 @@
   (symbol (lib_id "Device:D_Small_Filled") (at 64.516 54.102 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp yes) (fields_autoplaced)
     (uuid c7e45375-6802-401c-8ab1-e82f056ca17e)
-    (property "Reference" "D2" (at 66.548 52.832 90)
+    (property "Reference" "D14" (at 66.548 52.832 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "1N914" (at 66.548 55.372 90)
@@ -3081,9 +3042,6 @@
     (pin "2" (uuid bf8ed11c-6d7b-4a03-b910-ff67079eb59a))
     (instances
       (project "Dragon32"
-        (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/28dac1c2-804e-40fd-9ff5-acdb4226ab76"
-          (reference "D2") (unit 1)
-        )
         (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/e2a41718-bdac-4f1d-9b0f-8b4d725fe2df"
           (reference "D14") (unit 1)
         )
@@ -3094,7 +3052,7 @@
   (symbol (lib_id "Device:R_Small") (at 155.702 66.294 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp yes) (fields_autoplaced)
     (uuid cb1f4323-95f8-4dbd-bc00-ae511d8ef5e3)
-    (property "Reference" "R28" (at 155.702 61.214 90)
+    (property "Reference" "R35" (at 155.702 61.214 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "47R" (at 155.702 63.754 90)
@@ -3113,9 +3071,6 @@
     (pin "2" (uuid 52ad32df-1f46-4452-a162-cf3ceebe2796))
     (instances
       (project "Dragon32"
-        (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/64d8d7b7-14ab-4042-9ee8-f1aec24a139c"
-          (reference "R28") (unit 1)
-        )
         (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/e2a41718-bdac-4f1d-9b0f-8b4d725fe2df"
           (reference "R35") (unit 1)
         )
@@ -3269,7 +3224,7 @@
   (symbol (lib_id "Device:R_Small") (at 94.488 69.85 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp yes) (fields_autoplaced)
     (uuid e1cc61b5-e4e0-4528-af54-95e15d3f091b)
-    (property "Reference" "R28" (at 96.012 68.58 0)
+    (property "Reference" "R57" (at 96.012 68.58 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "47K" (at 96.012 71.12 0)
@@ -3288,9 +3243,6 @@
     (pin "2" (uuid 80db0f62-857e-4bef-8de3-3738306b690b))
     (instances
       (project "Dragon32"
-        (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/64d8d7b7-14ab-4042-9ee8-f1aec24a139c"
-          (reference "R28") (unit 1)
-        )
         (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/e2a41718-bdac-4f1d-9b0f-8b4d725fe2df"
           (reference "R57") (unit 1)
         )
@@ -3399,7 +3351,7 @@
   (symbol (lib_id "Device:R_Small") (at 125.984 53.34 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp yes) (fields_autoplaced)
     (uuid eb4f6acb-107d-4541-ba7a-290367cdd1e5)
-    (property "Reference" "R28" (at 125.984 48.26 90)
+    (property "Reference" "R55" (at 125.984 48.26 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "4K7" (at 125.984 50.8 90)
@@ -3418,9 +3370,6 @@
     (pin "2" (uuid 4d3db065-c982-4525-ab68-d5cc8498235b))
     (instances
       (project "Dragon32"
-        (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/64d8d7b7-14ab-4042-9ee8-f1aec24a139c"
-          (reference "R28") (unit 1)
-        )
         (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/e2a41718-bdac-4f1d-9b0f-8b4d725fe2df"
           (reference "R55") (unit 1)
         )
@@ -3431,7 +3380,7 @@
   (symbol (lib_id "Device:R_Small") (at 71.628 63.754 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp yes) (fields_autoplaced)
     (uuid ed983dd1-252c-43ac-a919-7fb3e62234a1)
-    (property "Reference" "R28" (at 71.628 58.674 90)
+    (property "Reference" "R59" (at 71.628 58.674 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100K" (at 71.628 61.214 90)
@@ -3450,9 +3399,6 @@
     (pin "2" (uuid 936b0b17-3ebb-47dd-961b-e06733972f91))
     (instances
       (project "Dragon32"
-        (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/64d8d7b7-14ab-4042-9ee8-f1aec24a139c"
-          (reference "R28") (unit 1)
-        )
         (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/e2a41718-bdac-4f1d-9b0f-8b4d725fe2df"
           (reference "R59") (unit 1)
         )

@@ -3553,9 +3553,6 @@
     (pin "7" (uuid fc8b727e-e553-48aa-9b1b-8d55673efcbd))
     (instances
       (project "Dragon32"
-        (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/e2a41718-bdac-4f1d-9b0f-8b4d725fe2df"
-          (reference "U13") (unit 4)
-        )
         (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/64d8d7b7-14ab-4042-9ee8-f1aec24a139c"
           (reference "U13") (unit 4)
         )

@@ -3519,7 +3519,7 @@
   (symbol (lib_id "Motorola PIA:W65C21") (at 59.69 64.262 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8fbf495e-2acc-4f5d-852b-f981027b144f)
-    (property "Reference" "U5" (at 61.8841 94.488 0)
+    (property "Reference" "U6" (at 61.8841 94.488 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "W65C21" (at 61.8841 97.028 0)
@@ -3577,9 +3577,6 @@
     (pin "9" (uuid 9d21f899-d9af-408b-b761-db3674a2661a))
     (instances
       (project "Dragon32"
-        (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/64d8d7b7-14ab-4042-9ee8-f1aec24a139c"
-          (reference "U5") (unit 1)
-        )
         (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/28dac1c2-804e-40fd-9ff5-acdb4226ab76"
           (reference "U6") (unit 1)
         )
@@ -4330,7 +4327,7 @@
   (symbol (lib_id "Motorola PIA:W65C21") (at 59.69 149.86 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d7bd42fc-9477-42b5-99d1-8752a66fd70d)
-    (property "Reference" "U5" (at 61.8841 180.086 0)
+    (property "Reference" "U7" (at 61.8841 180.086 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "W65C21" (at 61.8841 182.626 0)
@@ -4388,9 +4385,6 @@
     (pin "9" (uuid f8694e22-fb80-402e-9ad4-a84d7767ecb2))
     (instances
       (project "Dragon32"
-        (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/64d8d7b7-14ab-4042-9ee8-f1aec24a139c"
-          (reference "U5") (unit 1)
-        )
         (path "/0c3dceba-7c95-4b3d-b590-0eb581444beb/28dac1c2-804e-40fd-9ff5-acdb4226ab76"
           (reference "U7") (unit 1)
         )
