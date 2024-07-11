@@ -5616,7 +5616,7 @@
 		(uuid "0dc203b8-6e8d-44ac-8462-4c350465bfb2")
 	)
 	(label "D3"
-		(at 153.67 226.06 0)
+		(at 153.67 223.52 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5682,7 +5682,7 @@
 		(uuid "1eb237e5-7714-4649-a729-851f3bbd182a")
 	)
 	(label "DC4"
-		(at 187.96 215.9 180)
+		(at 187.96 233.68 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5704,7 +5704,7 @@
 		(uuid "2e3781d1-9941-4539-87c8-8f455143aa7d")
 	)
 	(label "D4"
-		(at 153.67 215.9 0)
+		(at 153.67 233.68 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5726,7 +5726,7 @@
 		(uuid "30731bb2-370d-4f36-8051-bd9c19eedaba")
 	)
 	(label "DC0"
-		(at 187.96 233.68 180)
+		(at 187.96 215.9 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5770,7 +5770,7 @@
 		(uuid "400f5da6-d845-4d2b-ad43-8729763f1cbd")
 	)
 	(label "DC6"
-		(at 187.96 220.98 180)
+		(at 187.96 228.6 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5869,7 +5869,7 @@
 		(uuid "5d78883d-8707-41a8-ad8f-37019fc0090e")
 	)
 	(label "D6"
-		(at 153.67 220.98 0)
+		(at 153.67 228.6 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5891,7 +5891,7 @@
 		(uuid "6a50f0cc-b897-44a6-8489-237bca7618dd")
 	)
 	(label "DC7"
-		(at 187.96 223.52 180)
+		(at 187.96 226.06 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5902,7 +5902,7 @@
 		(uuid "6b05aa51-7471-4687-adad-88d62ea6a8d3")
 	)
 	(label "DC3"
-		(at 187.96 226.06 180)
+		(at 187.96 223.52 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5946,7 +5946,7 @@
 		(uuid "828094b1-62e5-42ae-9fc9-dd28c2a8b88b")
 	)
 	(label "D1"
-		(at 153.67 231.14 0)
+		(at 153.67 218.44 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6001,7 +6001,7 @@
 		(uuid "a3e88d8a-59a2-4794-9fd3-7abb9b092eaf")
 	)
 	(label "D7"
-		(at 153.67 223.52 0)
+		(at 153.67 226.06 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6045,7 +6045,7 @@
 		(uuid "b07da887-4131-483e-96fd-1d1d1ecd9a3b")
 	)
 	(label "D5"
-		(at 153.67 218.44 0)
+		(at 153.67 231.14 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6056,7 +6056,7 @@
 		(uuid "b1b44544-42d3-4891-832b-0ca66b09203b")
 	)
 	(label "DC5"
-		(at 187.96 218.44 180)
+		(at 187.96 231.14 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6078,7 +6078,7 @@
 		(uuid "c597663b-1d6f-4a6b-87f1-bcf42e4c8004")
 	)
 	(label "D2"
-		(at 153.67 228.6 0)
+		(at 153.67 220.98 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6122,7 +6122,7 @@
 		(uuid "d670a6a4-ca69-40ad-9a10-dcd755fb7d5a")
 	)
 	(label "DC2"
-		(at 187.96 228.6 180)
+		(at 187.96 220.98 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6144,7 +6144,7 @@
 		(uuid "dc2f1aab-1d1b-484d-a483-4ddc6236b852")
 	)
 	(label "DC1"
-		(at 187.96 231.14 180)
+		(at 187.96 218.44 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6155,7 +6155,7 @@
 		(uuid "ec57c25a-bec7-48e0-bde2-722802c1290c")
 	)
 	(label "D0"
-		(at 153.67 233.68 0)
+		(at 153.67 215.9 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6198,7 +6198,7 @@
 		)
 		(uuid "fde8ea8c-b6bf-4c7a-acfe-b77f777e62f5")
 	)
-	(global_label "E"
+	(global_label "~{E}"
 		(shape input)
 		(at 157.48 241.3 180)
 		(fields_autoplaced yes)
@@ -6210,7 +6210,7 @@
 		)
 		(uuid "2b36e9b4-f147-4bbe-ad67-0337d6678f49")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 154.0068 241.2206 0)
+			(at 154 241.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6352,7 +6352,7 @@
 			)
 		)
 	)
-	(global_label "~{CPU_READ}"
+	(global_label "CPU_READ"
 		(shape input)
 		(at 157.48 238.76 180)
 		(fields_autoplaced yes)
@@ -6364,7 +6364,7 @@
 		)
 		(uuid "e20a12a3-021c-4863-b7ee-24a8af8e35c0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 144.8791 238.76 0)
+			(at 145.5333 238.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6418,7 +6418,7 @@
 			)
 		)
 	)
-	(global_label "~{CPU_WRITE}"
+	(global_label "CPU_WRITE"
 		(shape input)
 		(at 160.02 185.42 180)
 		(fields_autoplaced yes)
@@ -6430,7 +6430,7 @@
 		)
 		(uuid "ea37f37f-0482-4d1a-8c89-b272c45af5a1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 146.7539 185.42 0)
+			(at 147.4081 185.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6914,7 +6914,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm"
 			(at 170.18 228.6 0)
 			(effects
 				(font

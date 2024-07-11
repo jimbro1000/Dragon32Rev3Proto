@@ -4982,12 +4982,6 @@
 		(uuid "75f305a3-8d67-43c5-81ba-99ab59d1a104")
 	)
 	(junction
-		(at 48.26 63.5)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "833444ae-90dd-4e0d-a465-f91c438a8b21")
-	)
-	(junction
 		(at 208.026 47.0903)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6805,28 +6799,6 @@
 			)
 		)
 	)
-	(global_label "~{FIRQ}"
-		(shape input)
-		(at 47.879 63.5 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "8faf5b25-29a7-4f83-8859-7169d94c6824")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 41.261 63.4206 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "PIADAC5"
 		(shape input)
 		(at 260.35 39.37 180)
@@ -7373,6 +7345,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "~{FIRQx}"
+		(shape input)
+		(at 47.879 63.5 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f5812ea9-b4ce-4f32-b74a-36cc58da63c0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 40.226 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
